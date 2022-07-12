@@ -19,7 +19,6 @@ if __name__ == "__main__":
     )
 
     # Render scene
-
     image = renderer.render()
     if save:
         image.save("pose_1.png")
