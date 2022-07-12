@@ -70,29 +70,29 @@ python run_objectpose.py --batchsize=16 --dataroot="../../data/ObjectPose_datase
 **Some Samples from the data:**
 
 <p float="left">
-  <img src="Datasets/README images/airliner_roll_bg1_14.png" width="200" />
-  <img src="Datasets/README images/cannon_roll_bg1_116.png" width="200" /> 
-  <img src="Datasets/README images/tank_yaw_nobg_86.png" width="200" />
-  <img src="Datasets/README images/tractor_yaw_nobg_132.png" width="200" />
-  <img src="Datasets/README images/jeep_pitch_bg1_108.png" width="200" />
+  <img src="Datasets/README images/airliner_roll_bg1_14.png" width="150" />
+  <img src="Datasets/README images/cannon_roll_bg1_116.png" width="150" /> 
+  <img src="Datasets/README images/tank_yaw_nobg_86.png" width="150" />
+  <img src="Datasets/README images/tractor_yaw_nobg_132.png" width="150" />
+  <img src="Datasets/README images/jeep_pitch_bg1_108.png" width="150" />
 
 </p>
 <p float="left">
-  <img src="Datasets/README images/barberchair_roll_bg1_2.png" width="200" />
-  <img src="Datasets/README images/fireengine_roll_bg1_6.png" width="200" /> 
-  <img src="Datasets/README images/shoppingcart_yaw_nobg_14.png" width="200" />
-  <img src="Datasets/README images/tablelamp_yaw_nobg_80.png" width="200" />
-  <img src="Datasets/README images/rockingchair_yaw_nobg_24.png" width="200" /> 
+  <img src="Datasets/README images/barberchair_roll_bg1_2.png" width="150" />
+  <img src="Datasets/README images/fireengine_roll_bg1_6.png" width="150" /> 
+  <img src="Datasets/README images/shoppingcart_yaw_nobg_14.png" width="150" />
+  <img src="Datasets/README images/tablelamp_yaw_nobg_80.png" width="150" />
+  <img src="Datasets/README images/rockingchair_yaw_nobg_24.png" width="150" /> 
 </p><p float="left">
-  <img src="Datasets/README images/parkbench_pitch_bg1_192.png" width="200" />
-  <img src="Datasets/README images/mountainbike_pitch_bg1_64.png" width="200" /> 
-  <img src="Datasets/README images/hammerhead_pitch_bg1_28.png" width="200" />
-  <img src="Datasets/README images/forklift_roll_bg1_0.png" width="200" />
-  <img src="Datasets/README images/barberchair_roll_bg1_2.png" width="200" />
+  <img src="Datasets/README images/parkbench_pitch_bg1_192.png" width="150" />
+  <img src="Datasets/README images/mountainbike_pitch_bg1_64.png" width="150" /> 
+  <img src="Datasets/README images/hammerhead_pitch_bg1_28.png" width="150" />
+  <img src="Datasets/README images/forklift_roll_bg1_0.png" width="150" />
+  <img src="Datasets/README images/barberchair_roll_bg1_2.png" width="150" />
 
 </p><p float="left">
-    <img src="Datasets/README images/foldingchair_pitch_bg1_40.png" width="200" />
-    <img src="Datasets/README images/wheelbarrow_yaw_nobg_42.png" width="200" />
+    <img src="Datasets/README images/foldingchair_pitch_bg1_40.png" width="150" />
+    <img src="Datasets/README images/wheelbarrow_yaw_nobg_42.png" width="150" />
 </p>
 In addition to the main ObjectPose dataset the paper introduced a set of similar dataset to test to robustness to different tansformations including scaling, rotation, background rotation, etc. See the papers for more details about the datasets.
 
@@ -101,7 +101,7 @@ In addition to the main ObjectPose dataset the paper introduced a set of similar
     <img src="Datasets/README images/scaling + three-axes + compined + bg rot samples.jpg" width="400" />
 </p>
 
-## Models Table: List of models tested in the paper
+<!-- ## Models Table: List of models tested in the paper
 
 | Model         | Source | Dataset | Params | IN acc |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -158,4 +158,4 @@ In addition to the main ObjectPose dataset the paper introduced a set of similar
 | SWAG-RegNetY-128GF-384 | torchhub | IG(3.6B) | 645M | 88.23%
 | | | | | | |
 
-
+ -->
