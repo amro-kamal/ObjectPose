@@ -1,4 +1,5 @@
 # ObjectPose
+### Are vision models robust against Unusual poses?
 
 
 ## How to run the models on ImageNetV2 dataset:
@@ -26,7 +27,7 @@ pip install -r requirements.txt
 The command will install all the requirements for you. See the requirements.txt for all the rquirements. The code works fine with Python 3.7.13.
 
 ## Testing on ImageNetV2
-To test the models on ImageNetV2 dataset, go the src folder and run the command:
+To test the models on ImageNetV2 dataset, go to src folder and run the command:
 
 ```
 python run_imagenet_v2.py --batchsize=16
@@ -56,22 +57,15 @@ To test the models on ImageNetV2 dataset, go the src folder and run the command:
 ```
 python run_objectpose.py --batchsize=16 --dataroot="../../data/ObjectPose_dataset/ObjectPose" --saveroot="../../data/ObjectPose_dataset/Experiments Results/ObjectPose" --poses="ROLL YAW PITCH" --modelslist='all' --bgs="bg1 bg2 nobg" --crop
 
-python run_imagenet_v2.py --batchsize=16
-                          --dataroot='../../data/imagenetv2-matched-frequency/data' 
-                          --allresultpath = '../../data/imagenetv2-matched-frequency/all_results'
-                          --datasetname='imagenetv2' 
-                          --testcode=True
-                          --modelslist = 'all'
-
 ```
-**--poses** => Rotation axes used for creating the data. See commands.txt file for the poses corresdoning to each dataset.
-**--bgs** => Background images: this defines which part of the data to use. Note that not all the datasets use three backgrounds images. See commands.txt file.
+**--poses** => Rotation axes used for creating the data. See commands.txt file for poses corresponding to each dataset.
+
+**--bgs** => Background images: this defines which part of the data to use. Note that not all the datasets use three background images. See commands.txt file.
 
 
 
-The code for rendering 3d objects in this repo is from the [Strike (With) A Pose](https://github.com/airalcorn2/strike-with-a-pose) repo.
 # ObjectPose Dataset
-Are vision models robust against Unusual poses?
+ُThe Datasets folder contains the code for creating ObjectPose datasets. The code for rendering 3d objects in this repo is from the [Strike (With) A Pose](https://github.com/airalcorn2/strike-with-a-pose) repo.
 
 **Some Samples from the data:**
 
@@ -98,65 +92,70 @@ Are vision models robust against Unusual poses?
 
 </p><p float="left">
     <img src="Datasets/README images/foldingchair_pitch_bg1_40.png" width="200" />
+    <img src="Datasets/README images/wheelbarrow_yaw_nobg_42.png" width="200" />
+</p>
+In addition to the main ObjectPose dataset the paper introduced a set of similar dataset to test to robustness to different tansformations including scaling, rotation, background rotation, etc. See the papers for more details about the datasets.
+
+</p><p float="left">
+    <img src="Datasets/README images/objectpose truck samples.jpg" width="400" />
+    <img src="Datasets/README images/scaling + three-axes + compined + bg rot samples.jpg" width="400" />
 </p>
 
-## Models Table
+## Models Table: List of models tested in the paper
 
-| Model         | Source | Model Name| Dataset | Params | IN acc | repo |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Resnet50  | torchvision | ResNet50 | ImageNet(1M) | 25M | 79.3% |
-| Resnet152 | torchvision | ResNet152 | ImageNet(1M) | 69M | 80.1% |
-| Resnet101 | torchvision | ResNet101 | ImageNet(1M) | 43M | 80.1% |
+| Model         | Source | Dataset | Params | IN acc |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Resnet50  | torchvision | ImageNet(1M) | 25M | 76.1% 
+| Resnet152 | torchvision | ImageNet(1M) | 69M | 77.3% 
+| Resnet101 | torchvision  | ImageNet(1M) | 43M | 78.3% 
 | | | | | | |
-| Clip_vit_B16 | clip | CLIP_ViT_B_16 | WebImageText(400M) | 86M | 63.2% |
-| Clip_50      | clip | CLIP_ResNet50 | WebImageText(400M) | 25M  | 62.2% |
-| Clip_101     | clip | CLIP_ResNet101 | WebImageText(400M) | 43M | 59.6% |
-| | | | | | 
-| ViT_L16 | timm | ViT_L_patch16_224 | ImageNet(1M) | 307M | 77% |
-| ViT_B16 | timm | ViT_B_patch16_224 | ImageNet(1M) | 86M  | 78% |
-| ViT_S16 | timm | ViT_S_patch16_224 | ImageNet(1M) | 22M  | 75%  |
-| ViT_B16_sam | timm | ViT_B_patch16_sam_224 | ImageNet(1M) | 86M | 79.9% |
+| CLIP-ViT-B16 | CLIP |  WT(400M) | 86M | 63.2% 
+| CLIP-RN50     | CLIP |  WT(400M) | 25M  | 62.2% 
+| CLIP-RN101     | CLIP |  WT(400M) | 43M | 59.6% 
 | | | | | | |
-| ViT_21k_B16 | pytorch_pretrained_vit | ViT_21k_base16_384 | ImageNet21k(14M) | 86M | 84% | [repo](https://github.com/lukemelas/PyTorch-Pretrained-ViT)
-| ViT_21k_L16 | pytorch_pretrained_vit | ViT_21k_large16_384 | ImageNet21k(14M) | 307M | 85% | [repo](https://github.com/lukemelas/PyTorch-Pretrained-ViT)
+| ViT-L16 | timm |  ImageNet(1M) | 307M | 77% 
+| ViT-B16 | timm |  ImageNet(1M) | 86M  | 78% 
+| ViT-S16 | timm |  ImageNet(1M) | 22M  | 75%  
+| ViT-B16-sam | timm |  ImageNet(1M) | 86M | 79.9% 
+| ViT-21k-B16 | pretrained-vit | ImageNet21k(14M) | 86M | 84% 
+| ViT-21k-L16 | pretrained-vit | ImageNet21k(14M) | 307M | 85% 
 | | | | | | |
-| SWIN_B     | timm | swin_base_patch4_window7_224 | ImageNet21k(14M) | 88M  | 85.2% | 
-| SWIN_B_384 | timm | swin_base_patch4_window12_384 | ImageNet21k(14M) | 88M  | 86.4% |
-| SWIN_L     | timm | swin_large_patch4_window7_224 | ImageNet21k(14M) | 197M | 86.3% |
-| SWIN_L_384 | timm | swin_large_patch4_window12_384 | ImageNet21k(14M) | 197M | 87.3% |
+| SWIN-B-384 | timm | ImageNet21k(14M)  | 88M  | 86.4% 
+| SWIN-L     | timm | ImageNet21k(14M) | 197M | 86.3% 
+| SWIN-L-384 | timm | ImageNet21k(14M)  | 197M | 87.3% 
 | | | | | | |
-| DINO_S16 | torchhub | DINO_ViT_small_16 | xx | xx | xx
-| DINO_B16 | torchhub | DINO_ViT_base_16 | xx | xx | xx
-| DINO_RN50 | torchhub | DINO_ResNet50 | xx | xx | xx
+| Simclr | timm | ImageNet(1M) | 25M | 68.9% 
 | | | | | | |
-| Simclr | timm | SimCLR_ResNet50 | ImageNet(1M) | 25M | 69.3% |
-| Moco | timm | MOCO_ResNet50 | ImageNet(1M) | 25M | 71.1% | 
+| BiTM-RN50  | timm  | ImageNet21k(14M) | 25M | 80.0% 
+| BiTM-RN101 | timm  | ImageNet21k(14M) | 43M | 82.5% 
+| BiTM-RN152x2 | timm  | ImageNet21k(14M) | 98M | 85.5% 
 | | | | | | |
-| BiTM_50  | timm | BiTM_resnetv2_50x1 | ImageNet21k(14M) | 25M | 80.0% |
-| BiTM_101 | timm | BiTM_resnetv2_101x1 | ImageNet21k(14M) | 43M | 82.5% |
-| BiTM_152x2 | timm | BiTM_resnetv2_152x2 | ImageNet21k(14M) | 98M | 85.5% |
+| SWSL-ResNet50  | torchhub  | (64M) | 25M | 79.1% 
+| SWSL-ResNeXt101 | torchhub  | (64M) | 193M | 81.2% 
 | | | | | | |
-| SWSL_ResNet50  | timm | ResNet50_swsl | (64M) | 25M | 79.1% |
-| SWSL_ResNeXt101 | timm | ResNeXt101_32x16d_swsl | (64M) | 193M | 81.2% |
+| Mixer-B16 | timm | ImageNet(1M) | 59M | 76.44% 
+| Mixer-L16 | timm |  ImageNet(1M) | 207M | 71.76% 
 | | | | | | |
-| Mixer_S16 | timm | Mixer_small_16_224 | ImageNet(1M) | 18M | xx |
-| Mixer_B16 | timm | Mixer_base_16_224 | ImageNet(1M) | 59M | 76.44% |
-| Mixer_L16 | timm | Mixer_largr_16_224 | ImageNet(1M) | 207M | 71.76% |
+| BEiT-B16 | transformers | ImageNet21k(14M) | 87M | 85.2%  
+| BEiT-L16 | transformers |  ImageNet21k(14M) | 304M | 87.4% 
 | | | | | | |
-| Beit_B16 | timm | Beit_base_16_224 | ImageNet21k(14M) | 87M | 85.2% | [repo](https://github.com/microsoft/unilm/tree/master/beit)
-| Beit_L16 | timm | Beit_large_16_224 | ImageNet21k(14M) | 304M | 87.4% | [repo](https://github.com/microsoft/unilm/tree/master/beit)
+| Deit-B16 | timm |  ImageNet(1M) | 86M | 83.4% 
+| Deit-S16 | timm |  ImageNet(1M) | 22M | 81.2%  
 | | | | | | |
-| Deit_B16 | timm | Deit_base_16_224 | ImageNet(1M) | 86M | 83.4% | [repo](https://github.com/facebookresearch/deit)
-| Deit_S16 | timm | Deit_small_16_224 | ImageNet(1M) | 22M | 81.2% | [repo](https://github.com/facebookresearch/deit)
+| EffN-B7-NS | torchhub | JFT(300M) | 66M | 86.9% 
+| EffN-L2-NS | torchhub |   JFT(300M) | 480M|  88.4% 
+| | | | | | | 
+| ConvNeXt-XL | timm |  ImageNet21k(14M) | 350M | 87.0% 
+| ConvNeXt-L-384 | timm | ImageNet21k(14M) | 198M | 87.5%  
+| ConvNeXt-L | timm |  ImageNet21k(14M) | 198M | 86.6% 
+| ConvNeXt-L | timm |  ImageNet21k(1M) | 306M | 82.6% 
 | | | | | | |
-| EffN_b7_NS | timm | Efficientnet_b7_noisy_student | JFT(300M) | 66M | 86.9% |  |
-| EffN_l2_NS | timm | Efficientnet_l2_noisy_student |  JFT(300M) | 480M|  88.4% | |
-| ConvNeXt-XL | timm | ConvNeXt-XL_384 | ImageNet21k(14M) | 350M | 87.8% | [repo](https://github.com/facebookresearch/ConvNeXt) |
-| ConvNeXt-XL | timm | ConvNeXt-XL_224 | ImageNet21k(14M) | 350M | 87.0% | [repo](https://github.com/facebookresearch/ConvNeXt) |
-| ConvNeXt-L | timm | ConvNeXt-L_384 | ImageNet21k(14M) | 198M | 87.5% | [repo](https://github.com/facebookresearch/ConvNeXt) |
-| ConvNeXt-L | timm | ConvNeXt-L_224 | ImageNet21k(14M) | 198M | 86.6% | [repo](https://github.com/facebookresearch/ConvNeXt) |
-| ConvNeXt-B | timm | ConvNeXt-B_384 | ImageNet21k(14M) | 89M | 86.8% | [repo](https://github.com/facebookresearch/ConvNeXt) |
-| ConvNeXt-B | timm | ConvNeXt-B_224 | ImageNet21k(14M) | 89M | 85.8% | [repo](https://github.com/facebookresearch/ConvNeXt) |
-
+| ConVit-B | timm | ImageNet(1M) | 86M | 82.4% 
+| ConVit-S | timm | ImageNet(1M) | 27M | 81.3% 
+| | | | | | |
+| SWAG-ViT-L16-512 | torchhub | IG(3.6B) | 305M | 88.07% 
+| SWAG-ViT-H14-512 | torchhub | IG(3.6B) | 633M | 88.55% 
+| SWAG-RegNetY-128GF-384 | torchhub | IG(3.6B) | 645M | 88.23%
+| | | | | | |
 
 
