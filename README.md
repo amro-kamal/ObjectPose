@@ -52,7 +52,7 @@ python run_imagenet_v2.py --batchsize=16
 
 
 ## Testing on ObjectPose:
-To test the models on ImageNetV2 dataset, go the src folder and run the command:
+To test the models on ObjectPose dataset, go the src folder and run the command:
 
 ```
 python run_objectpose.py --batchsize=16 --dataroot="../../data/ObjectPose_dataset/ObjectPose" --saveroot="../../data/ObjectPose_dataset/Experiments Results/ObjectPose" --poses="ROLL YAW PITCH" --modelslist='all' --bgs="bg1 bg2 nobg" --crop
@@ -65,7 +65,7 @@ python run_objectpose.py --batchsize=16 --dataroot="../../data/ObjectPose_datase
 
 
 # ObjectPose Dataset
-ُThe Datasets folder contains the code for creating ObjectPose datasets. The code for rendering 3d objects in this repo is from the [Strike (With) A Pose](https://github.com/airalcorn2/strike-with-a-pose) repo.
+ُThe Datasets folder contains the code for creating ObjectPose datasets. The code for rendering 3d objects in this repo is from [Strike (With) A Pose](https://github.com/airalcorn2/strike-with-a-pose) repo.
 
 **Some Samples from the data:**
 
@@ -94,7 +94,7 @@ python run_objectpose.py --batchsize=16 --dataroot="../../data/ObjectPose_datase
     <img src="Datasets/README images/foldingchair_pitch_bg1_40.png" width="150" />
     <img src="Datasets/README images/wheelbarrow_yaw_nobg_42.png" width="150" />
 </p>
-In addition to the main ObjectPose dataset the paper introduced a set of similar dataset to test to robustness to different tansformations including scaling, rotation, background rotation, etc. See the papers for more details about the datasets.
+In addition to the main ObjectPose dataset, the paper introduced a set of similar datasets to test to robustness to different tansformations including scaling, rotation, background rotation, etc. See the paper for more details about the datasets.
 
 </p><p float="left">
     <img src="Datasets/README images/objectpose truck samples.jpg" width="400" />
