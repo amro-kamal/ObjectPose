@@ -33,3 +33,5 @@ Datasets/prev_code.py
 Datasets/in-plane-samples/
 Datasets/out-of-plane-samples/
 Datasets/requirements.txt
+Datasets/gpu_info.json
+Datasets/test_pose360.py
