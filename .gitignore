@@ -25,9 +25,11 @@ Datasets/split_IN_val.py
 Datasets/seperate_CO3d.py
 Datasets/run_model.py
 Datasets/run_all_models.py
+Datasets/setup.py
 Datasets/grid_plot.py
 Datasets/create_videos.py
 Datasets/CO3D_generate_rot_both.py
 Datasets/prev_code.py
 Datasets/in-plane-samples/
 Datasets/out-of-plane-samples/
+Datasets/requirements.txt
