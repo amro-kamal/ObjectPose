@@ -1,0 +1,34 @@
+#imagenetv2
+python run_imagenet_v2.py --batchsize=16 --dataroot='../../data/CO3D_subset/data' --allresultpath='../../data/CO3D_subset/all_results' --datasetname='co3d' --modelslist='all' --crop
+
+#co3d
+python run_imagenet_v2.py --batchsize=16 --dataroot='../../data/imagenetv2-matched-frequency/data' --allresultpath='../../data/imagenetv2-matched-frequency/all_results_demo' --datasetname='imagenetv2' --modelslist='all' --crop
+
+#ObjectPose
+python run_objectpose.py --batchsize=16 --dataroot="../../data/ObjectPose_dataset/ObjectPose" --saveroot="../../data/ObjectPose_dataset/Experiments Results/ObjectPose" --poses="ROLL YAW PITCH" --modelslist='all' --bgs="bg1 bg2 nobg" --crop
+
+#ObjectPose +-10
+python run_objectpose.py --batchsize=16 --dataroot='../../data/ObjectPose_dataset/ObjectPose +-10' --saveroot='../../data/ObjectPose_dataset/Experiments Results/ObjectPose +-10 result' --poses='ROLL YAW PITCH' --modelslist='all' --bgs='bg1 bg2 nobg' --crop
+
+#Two-axes rotations
+python run_objectpose.py  --batchsize=16 --dataroot='../../data/ObjectPose_dataset/two_axes' --saveroot='../../data/ObjectPose_dataset/Experiments Results/two_axes_rotation result' --poses='ROLLPITCH' --modelslist='all' --bgs='bg1 bg2 nobg' --crop
+
+#Image Rotations
+python run_objectpose.py --batchsize=16 --datasetname="objectpose_rot_both" --dataroot='../../data/ObjectPose_dataset/rot_both360' --saveroot='../../data/ObjectPose_dataset/Experiments Results/rot_both360 result' --poses='ROLL' --modelslist='all' --bgs='bg1 bg2 nobg' --crop 
+
+#In-plane Rotation
+python run_objectpose.py --crop --batchsize=16 --datasetname="objectpose_in_plane_rot" --dataroot='gdrive/MyDrive/AMMI GP/newdata/360/IN_PLANE_ROLL' --saveroot='gdrive/MyDrive/AMMI GP/newdata/360/Experiments Results/IN_PLANE_ROLL result' --poses='IN_PLANE_ROLL' --modelslist='all' --bgs='bg1 bg2 nobg'
+
+#Three-axes rotations
+python run_objectpose.py --datasetname="objectpose_3axes_rot"  --batchsize=16 --dataroot="../../data/ObjectPose_dataset/three_axes_rotation" --saveroot="../../data/ObjectPose_dataset/three_axes_rotation result" --modelslist="all"  --crop
+
+#Scale
+python run_objectpose.py --datasetname="objectpose_scaling"  --batchsize=16 --dataroot="../../data/ObjectPose_dataset/scaling" --saveroot="../../data/ObjectPose_dataset/scaling result" --modelslist="all" --crop
+
+#Scale + Three-axes Rotations
+python run_objectpose.py --datasetname="objectpose_scale_and_rot"  --batchsize=16 --dataroot="../../data/ObjectPose_dataset/scale_and_rot" --saveroot="../../data/ObjectPose_dataset/scale_and_rot result" --modelslist="all"  --crop
+
+#Background rotation
+python run_objectpose.py --datasetname="objectpose_bg_rot"  --batchsize=16 --dataroot="../../data/ObjectPose_dataset/bg_rot" --saveroot="../../data/ObjectPose_dataset/bg_rot result" --modelslist="all" --crop
+
+

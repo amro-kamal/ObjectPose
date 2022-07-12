@@ -1,0 +1,115 @@
+absl-py @ file:///opt/concourse/worker/volumes/live/038c7640-529d-45f3-464f-ee37f5e0f4eb/volume/absl-py_1623867246969/work
+astor==0.8.1
+astroid @ file:///opt/concourse/worker/volumes/live/1abcdc37-d4b6-466f-7b88-18a6ab5ae15b/volume/astroid_1628063153464/work
+astunparse==1.6.3
+brotlipy==0.7.0
+cached-property @ file:///tmp/build/80754af9/cached-property_1600785575025/work
+cachetools==4.2.4
+certifi==2021.10.8
+cffi @ file:///opt/concourse/worker/volumes/live/4a8f7628-1917-402a-5a6a-cdafcc3ec547/volume/cffi_1625814707380/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+click==3.3
+clip @ git+https://github.com/openai/CLIP@04f4dc2ca1ed0acc9893bd1a3b526a7e02c4bb10
+cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1632508026186/work
+cma==3.1.0
+cornet==0.1.3
+coverage @ file:///opt/concourse/worker/volumes/live/4f1a5e30-f675-4496-6570-bc6669a34f2a/volume/coverage_1614614860186/work
+cryptography @ file:///opt/concourse/worker/volumes/live/fab3474b-40c6-4001-48cb-802be615e43d/volume/cryptography_1633520388016/work
+cycler==0.10.0
+Cython @ file:///opt/concourse/worker/volumes/live/432fe198-1725-458b-4530-7523a5e3de1a/volume/cython_1626256963932/work
+cytoolz==0.11.0
+dask @ file:///tmp/build/80754af9/dask-core_1630523592567/work
+dataclasses==0.6
+e==1.4.5
+filelock==3.3.0
+flatbuffers==1.12
+fonttools==4.25.0
+fsspec @ file:///tmp/build/80754af9/fsspec_1632413898837/work
+ftfy @ file:///tmp/build/80754af9/ftfy_1598643610002/work
+gast==0.3.3
+gdown==4.0.2
+glcontext==2.3.4
+google-auth==1.35.0
+google-auth-oauthlib==0.4.6
+google-pasta @ file:///Users/ktietz/demo/mc3/conda-bld/google-pasta_1630577991354/work
+grpcio==1.32.0
+h5py==2.10.0
+idna @ file:///tmp/build/80754af9/idna_1622654382723/work
+imageio @ file:///tmp/build/80754af9/imageio_1617700267927/work
+importlib-metadata @ file:///opt/concourse/worker/volumes/live/f3c3a723-0733-424b-6c0e-af69ac95b59a/volume/importlib-metadata_1631916705096/work
+isort @ file:///tmp/build/80754af9/isort_1628603791788/work
+Jinja2==2.7.3
+Keras-Applications @ file:///tmp/build/80754af9/keras-applications_1594366238411/work
+Keras-Preprocessing @ file:///tmp/build/80754af9/keras-preprocessing_1612283640596/work
+kiwisolver @ file:///opt/concourse/worker/volumes/live/1e6d28e8-da14-4365-7344-567a05db7efc/volume/kiwisolver_1612282399491/work
+lazy-object-proxy @ file:///opt/concourse/worker/volumes/live/62c2169c-fe65-46ff-434a-480cde88c65b/volume/lazy-object-proxy_1616529070475/work
+locket==0.2.1
+Markdown @ file:///opt/concourse/worker/volumes/live/255f8945-2411-4469-7c82-a749af3aef33/volume/markdown_1614363822772/work
+MarkupSafe==2.1.1
+matplotlib @ file:///opt/concourse/worker/volumes/live/ea31f923-d5bd-4af7-6d95-b910b4a0fa5f/volume/matplotlib-suite_1628011455335/work
+mccabe==0.6.1
+mkl-fft==1.3.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+modelvshuman==0.1
+moderngl==5.6.4
+multipledispatch==0.6.0
+munkres==1.1.4
+networkx @ file:///tmp/build/80754af9/networkx_1633639043937/work
+numpy @ file:///opt/concourse/worker/volumes/live/a1b5ea96-b05c-40ba-5dfb-4542ece1c186/volume/numpy_and_numpy_base_1603491228242/work
+oauthlib==3.1.1
+olefile==0.46
+opencv-python==4.2.0.32
+opt-einsum @ file:///tmp/build/80754af9/opt_einsum_1621500238896/work
+packaging @ file:///tmp/build/80754af9/packaging_1625611678980/work
+pandas==1.3.3
+partd @ file:///tmp/build/80754af9/partd_1618000087440/work
+pdf2image==1.16.0
+Pillow @ file:///opt/concourse/worker/volumes/live/58ac8b05-9c32-444c-5460-921d3b599939/volume/pillow_1625655835023/work
+protobuf==3.17.2
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pylint @ file:///opt/concourse/worker/volumes/live/4949af29-b8b7-4c3a-695e-9cc896d42904/volume/pylint_1627536796184/work
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1608057966937/work
+pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
+pyrr==0.10.3
+PySocks @ file:///opt/concourse/worker/volumes/live/ef943889-94fc-4539-798d-461c60b77804/volume/pysocks_1605305801690/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+pytorch-pretrained-vit==0.0.7
+pytz==2021.3
+PyWavelets @ file:///opt/concourse/worker/volumes/live/4c8a2af4-1e43-4df6-4c7a-c73342176802/volume/pywavelets_1601658329224/work
+PyYAML==3.11
+regex @ file:///opt/concourse/worker/volumes/live/84f678f0-8362-498c-6bbf-bb60d23a10cc/volume/regex_1629302094173/work
+requests @ file:///tmp/build/80754af9/requests_1629994808627/work
+requests-oauthlib==1.3.0
+rsa==4.7.2
+scikit-image==0.18.1
+scipy @ file:///opt/concourse/worker/volumes/live/cd12a34b-67bb-4e81-5e11-d0d209d4b37d/volume/scipy_1616703203371/work
+seaborn==0.11.2
+six==1.15.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.4.0
+tensorflow-estimator==2.4.0
+tensorflow-hub==0.12.0
+termcolor==1.1.0
+tifffile==2020.10.1
+timm @ git+https://github.com/rwightman/pytorch-image-models.git@01a0e25a67305b94ea767083f4113ff002e4435c
+toml @ file:///tmp/build/80754af9/toml_1616166611790/work
+toolz @ file:///home/linux1/recipes/ci/toolz_1610987900194/work
+torch @ file:///opt/concourse/worker/volumes/live/11e8f1df-b219-4bb1-5397-3a9589bb82c1/volume/pytorch_1614404301885/work
+torchcam==0.2.0
+torchvision==0.8.2
+tornado @ file:///opt/concourse/worker/volumes/live/d531d395-893c-4ca1-6a5f-717b318eb08c/volume/tornado_1606942307627/work
+tqdm @ file:///tmp/build/80754af9/tqdm_1631818572807/work
+typed-ast @ file:///opt/concourse/worker/volumes/live/22984077-cbd4-449f-4417-2737b09fa494/volume/typed-ast_1624953682230/work
+typing-extensions==3.7.4.3
+urllib3==1.26.7
+visualpriors==0.3.5
+wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
+Werkzeug @ file:///tmp/build/80754af9/werkzeug_1631818832573/work
+wrapt==1.12.1
+zipp @ file:///tmp/build/80754af9/zipp_1633618647012/work

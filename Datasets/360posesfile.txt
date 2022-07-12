@@ -1,0 +1,142 @@
+tank
+   ROLL:   R_obj = gen_rotation_matrix(np.pi/2, degreep, np.pi/10)  #yaw, pitch, roll
+   PITCH: gen_rotation_matrix(np.pi/2.8, 0, degreep), 
+   YAW: gen_rotation_matrix(np.pi/10, degreep, 0)  #yaw, pitch, roll
+   IN_PLANE: ROLLphi(-degreep) @ YAWThetaMat(np.pi/2) @ ROLLThetaMat(np.pi/10)
+   scale_range = [-15, -6]
+
+
+forklift:
+  ROLL:  [gen_rotation_matrix(np.pi/2.5, degreep, np.pi/20) , -9 , 0.8]
+  PITCH: [gen_rotation_matrix(np.pi/2.8, 0, degreep) , -9, 0.8]
+  YAW: [gen_rotation_matrix(np.pi/10, degreep, 0), -9, 0.8]
+  IN_PLANE: ROLLphi(-degree) @ YAWThetaMat(np.pi/2.5) @ ROLLThetaMat(np.pi/20)
+   scale_range = [-18, -6]
+
+garbagetruck:
+   ROLL: [gen_rotation_matrix(np.pi/10, 0, degreep)  , -6 , 1.3]
+   PITCH: gen_rotation_matrix(np.pi/10, degreep, 0) , -6, 1.3]
+   YAW: [gen_rotation_matrix(-np.pi/1.5, 0, degreep), -5.5, 1.3]
+   IN_PLANE: ROLLphi @ YAWThetaMat(np.pi/10)
+   scale_range = [-18, -7]
+
+tractor:
+   ROLL: [gen_rotation_matrix(np.pi/1.5, degreep, np.pi/0.97), 1.1, -7]
+   PITCH: gen_rotation_matrix(-np.pi/1.5, 0, degreep+np.pi) , , -7, 1.1]
+   YAW: [gen_rotation_matrix(np.pi/10, degreep+np.pi, 0), -7, 0.9]
+   IN_PLANE: ROLLphi(-degreep) @ YAWThetaMat(np.pi/1.5) @ ROLLThetaMat(np.pi/0.97)
+   scale_range = [-19, -8]
+
+electriclocomotive:
+   ROLL: [gen_rotation_matrix(np.pi/2.3, degreep, 0) , -6, 1.1] #bg1, nobg
+         [gen_rotation_matrix(np.pi/5, degreep+np.pi/30, 0), -4.8, 1.1] bg2
+   PITCH: [gen_rotation_matrix(np.pi/2.3, 0, degreep), -6, 1.1]
+         [gen_rotation_matrix(np.pi/5, np.pi/30, degreep), -4.8, 1.1 ] #bg2
+   YAW:  [gen_rotation_matrix(0, np.pi/50, degreep), (0,0,-2.2), 1.1] #bg1, nobg
+         [gen_rotation_matrix(np.pi/4.2, np.pi/30 , degreep), (-0.3, 0, -2.4) ,1.1]  #bg2
+
+wheelbarrow: 
+   ROLL:  [gen_rotation_matrix(0, np.pi/10, degreep-np.pi/30), -6, 1]  ,#bg2, nobg=-6.5
+   PITCH: [gen_rotation_matrix(0, degreep+np.pi/10, -np.pi/30) , -6, 1] , #bg2, nobg=-6.5
+   YAW: [gen_rotation_matrix(-np.pi/2.2, 0, degreep) , -6 , 1] , #bg2, nobg=-6.5
+   IN_PLANE:  ROLLphi(degreep-np.pi/30) @ PITCHThetaMat(np.pi/10)
+   scale_range = [-19, -8]
+
+mountainbike:
+   ROLL: [gen_rotation_matrix(np.pi+np.pi/10, -np.pi/60, degreep) , (0,.-0.2,-5), 1]
+   PITCH: gen_rotation_matrix(np.pi/1.5, 0, degreep) , (0,-0.2,-5.5), 1
+   YAW: [gen_rotation_matrix(degreep+np.pi/2, np.pi/60, 0) , (0,-0.1,-7), 1] #bg2 -0.3
+   IN_PLANE:  ROLLphi(-degreep) @ YAWThetaMat(np.pi+np.pi/7) @ PITCHThetaMat(-np.pi/60)
+   scale_range = [-19, -5]
+
+fireengine:
+   ROLL: [gen_rotation_matrix(np.pi/10, np.pi/20, degreep), (0, 0.05, -5.5), 0.75] #-6, degreep+np.pi/40
+   PITCH: [gen_rotation_matrix(np.pi/2.7, 0, degreep+np.pi/45), (0, 0.05, -5.5), 0.75]
+   YAW:  [gen_rotation_matrix(np.pi/10, degreep+np.pi/20, 0), (0, 0.05, -5.5), 0.75]
+   IN_PLANE: ROLLphi @ YAWThetaMat @ PITCHThetaMat
+   scale_range = [-18, -7]
+
+jeep:
+   ROLL: [gen_rotation_matrix(np.pi/3.3, degreep+np.pi/90, 0) , -6.5, 1.2]
+   YAW: [gen_rotation_matrix(np.pi/10,np.pi/90, degreep)   , -5.5 ,1.2]
+   PITCH: []
+   IN_PLANE: ROLLphi(degreep-np.pi/90) @ YAWThetaMat(np.pi/3.3)
+   scale_range = [-14, -6]
+
+
+tablelamp:
+   ROLL: [ gen_rotation_matrix(-np.pi/20, -np.pi/20, degreep) , -6 , 1]
+   PITCH: [ gen_rotation_matrix(-np.pi/20, degreep, 0) , -6, 1]
+   YAW: [ gen_rotation_matrix(0, degreep, np.pi/5) , -6 , 1]
+   IN_PLANE: ROLLphi @ YAWThetaMat(-np.pi/20) @ PITCHThetaMat(-np.pi/20)
+   scale_range = [-22, -8]
+
+parkbench:
+   ROLL: [gen_rotation_matrix(-np.pi/2, degreep, -np.pi/15), (0, -0.1, -8.5), 1.2]
+   PITCH: [gen_rotation_matrix(-np.pi/2.5, 0, degreep),  (0, -0.1, -8.5), 1.2]
+   YAW: [ gen_rotation_matrix(degreep-np.pi/2, 0, 0) , (0, -0.3, -8.5), 1.2]
+   IN_PLANE: ROLLphi(-degree) @ YAWThetaMat @ ROLLThetaMat
+   scale_range = [-28, -9]
+
+
+diningtable:
+   ROLL: [ gen_rotation_matrix(-np.pi/2.5, degreep, -np.pi/60), (0, -0.35, -7), 1] # bg2 (0, -0.45, -7)   / nobg  (0, 0, -7) -np.pi/40
+   PITCH: [gen_rotation_matrix(-np.pi/2, 0, degreep-np.pi/45), (0, -0.6, -7),  0.9]
+   YAW: [gen_rotation_matrix(-np.pi/3.5, 0, degreep-np.pi/60) , (0, -4.5, -7), 1] #bg2 (0, -5, -7)  / nobg  (0, 0, -7) -np.pi/30
+
+foldingchair:
+   ROLL: [ gen_rotation_matrix(np.pi/1.35, -np.pi/30, degreep+np.pi/30) , (0,0,-7), 0.75] #bg2 gen_rotation_matrix(np.pi/1.5, -np.pi/15, degreep+np.pi/15)
+   PITCH: [ gen_rotation_matrix(np.pi/1.35, degreep-np.pi/30, +np.pi/30) , (0,0,-7), 0.75] #bg2 gen_rotation_matrix(np.pi/1.5, degreep-np.pi/15, +np.pi/15)
+   YAW: [ gen_rotation_matrix(degreep+np.pi/1.35, -np.pi/30, +np.pi/30) , (0,0,-7), 0.75] #bg2 gen_rotation_matrix(degreep+np.pi/1.5, -np.pi/15, +np.pi/15)
+   IN_PLANE: ROLLphi(dgereep) @ PITCHThetaMat(np.pi/30) @YAWThetaMat(-np.pi/1.35) @YAW_90 
+-np.pi+np.pi/10, -np.pi/20, 0
+scale_range = [-30, -9]
+
+cannon:
+   ROLL: [ gen_rotation_matrix(np.pi/10, np.pi/30, degreep) , (0, 0, 0.65), -0.75 ]
+   PITCH: [ gen_rotation_matrix(np.pi/10, degreep+np.pi/30, 0) , (0, 0, 0.65), -0.75 ]
+   YAW: [ gen_rotation_matrix(degreep, 0, -np.pi/8) , (0, 0, 0.65), -0.75 ]
+   IN_PLANE:  ROLLphi @ YAWThetaMat @ PITCHThetaMat
+np.pi/3, np.pi/30, 0
+scale_range = [-33, -11]
+
+airliner: 
+   ROLL: [gen_rotation_matrix(np.pi/10, np.pi/15, degreep), (0, 0, 0.65), -0.75 ]
+   PITCH: [gen_rotation_matrix(np.pi/10, degreep+np.pi/15, np.pi/15), (0, 0, 0.65), -0.75 ]
+   YAW: [ gen_rotation_matrix(degreep+np.pi/10, 0, np.pi/15), (0, 0, 0.65), -0.75 ]
+   IN-PLANE: ROLLphi @ YAWTheta30 @ PITCHTheta
+scale_range = [-33, -7]
+
+
+rockingchair:
+   ROLL: [ gen_rotation_matrix(+np.pi/10, 0, degreep) , (0, 0, 0.75), -0.75 ]
+   PITCH: [ gen_rotation_matrix(+np.pi/10, degreep, 0),   (0, 0, 0.75), -0.75 ]
+   YAW: [ gen_rotation_matrix(degreep+np.pi/10, np.pi/5, 0), (0, 0, 0.75), -0.75 ]
+   IN_PLANE: ROLLphi @ YAWThetaMat(np.pi/10)
+scale_range = [-33, -10]
+   
+shoppingcart:
+   ROLL: [ gen_rotation_matrix(np.pi/3.5, degreep+np.pi/40, np.pi/30), (0, 0, 9), -0.7]
+   PITCH: [ gen_rotation_matrix(np.pi/3.5, +np.pi/40, degreep+np.pi/30), (0, 0, 9), -0.7 ]
+   YAW: [ gen_rotation_matrix(np.pi/40, +np.pi/40, degreep), (0, -0.2, 9), -0.7]
+   IN_PLANE: ROLLphi(-degree-(np.pi/40)) @ YAWThetaMat(np.pi/3.5) @ ROLLThetaMat(np.pi/25) @ PITCHThetaMat( np.pi/70)
+scale_range = [-34, -11]
+
+barberchair:
+   ROLL: [  gen_rotation_matrix(np.pi/2.2, degreep, 0), (0,0,-8), 0.7]
+   PITCH: [ gen_rotation_matrix(np.pi/2.2, 0, degreep), (0,0,-8), 0.7]
+   YAW: [ gen_rotation_matrix(0, degreep, 0), (0,0,-8), 0.7]
+   IN-PLACE: ROLLphi @ YAWThetaMat
+np.pi/10, 0, 0
+scale_range = [-34, -11]
+
+hammerhead:
+   ROLL: [ gen_rotation_matrix(-np.pi/10, -np.pi/10, degreep), (0,0,-7), 0.7]
+   PITCH: [ gen_rotation_matrix(-np.pi/10, degreep-np.pi/10, 0), (0,0,-7), 0.7]
+   YAW: [ gen_rotation_matrix(degreep-np.pi/10, -np.pi/10, 0), (0,0,-7), 0.7]
+   IN_PLANE: ROLLphi(degreep) @ YAWThetaMat(-np.pi/10) @ PITCHThetaMat(-np.pi/10)
+-np.pi/8, np.pi/10, 0
+scale_range = [-34, -10]
+
+
+  
