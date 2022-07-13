@@ -5,6 +5,8 @@ ArXiv Link:
 # ObjectPose Dataset
 ُThe Datasets folder contains the code for creating ObjectPose datasets. The code for rendering 3d objects in this repo is from [Strike (With) A Pose](https://github.com/airalcorn2/strike-with-a-pose) repo.
 
+You can also directly access the dataset of images, 3D models and background images at this address: https://huggingface.co/datasets/Amro-Kamal/ObjectPose/tree/main
+
 **Some Samples from the data:**
 
 <p float="left">
