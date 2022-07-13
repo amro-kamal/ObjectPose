@@ -1,3 +1,45 @@
+Progress and limitations of deep networks to recognize objects in unusual poses
+Amro Abbas & Stephane Deny
+ArXiv Link:
+
+# ObjectPose Dataset
+ُThe Datasets folder contains the code for creating ObjectPose datasets. The code for rendering 3d objects in this repo is from [Strike (With) A Pose](https://github.com/airalcorn2/strike-with-a-pose) repo.
+
+**Some Samples from the data:**
+
+<p float="left">
+  <img src="Datasets/README images/airliner_roll_bg1_14.png" width="150" />
+  <img src="Datasets/README images/cannon_roll_bg1_116.png" width="150" /> 
+  <img src="Datasets/README images/tank_yaw_nobg_86.png" width="150" />
+  <img src="Datasets/README images/tractor_yaw_nobg_132.png" width="150" />
+  <img src="Datasets/README images/jeep_pitch_bg1_108.png" width="150" />
+
+</p>
+<p float="left">
+  <img src="Datasets/README images/barberchair_roll_bg1_2.png" width="150" />
+  <img src="Datasets/README images/fireengine_roll_bg1_6.png" width="150" /> 
+  <img src="Datasets/README images/shoppingcart_yaw_nobg_14.png" width="150" />
+  <img src="Datasets/README images/tablelamp_yaw_nobg_80.png" width="150" />
+  <img src="Datasets/README images/rockingchair_yaw_nobg_24.png" width="150" /> 
+</p><p float="left">
+  <img src="Datasets/README images/parkbench_pitch_bg1_192.png" width="150" />
+  <img src="Datasets/README images/mountainbike_pitch_bg1_64.png" width="150" /> 
+  <img src="Datasets/README images/hammerhead_pitch_bg1_28.png" width="150" />
+  <img src="Datasets/README images/forklift_roll_bg1_0.png" width="150" />
+  <img src="Datasets/README images/barberchair_roll_bg1_2.png" width="150" />
+
+</p><p float="left">
+    <img src="Datasets/README images/foldingchair_pitch_bg1_40.png" width="150" />
+    <img src="Datasets/README images/wheelbarrow_yaw_nobg_42.png" width="150" />
+</p>
+In addition to the main ObjectPose dataset, the paper introduced a set of similar datasets to test to robustness to different tansformations including scaling, rotation, background rotation, etc. See the paper for more details about the datasets.
+
+</p><p float="left">
+    <img src="Datasets/README images/objectpose truck samples.jpg" width="400" />
+    <img src="Datasets/README images/scaling + three-axes + compined + bg rot samples.jpg" width="400" />
+</p>
+
+
 # ObjectPose
 ### Are vision models robust against Unusual poses?
 
@@ -62,44 +104,6 @@ python run_objectpose.py --batchsize=16 --dataroot="../../data/ObjectPose_datase
 
 **--bgs** => Background images: this defines which part of the data to use. Note that not all the datasets use three background images. See commands.txt file.
 
-
-
-# ObjectPose Dataset
-ُThe Datasets folder contains the code for creating ObjectPose datasets. The code for rendering 3d objects in this repo is from [Strike (With) A Pose](https://github.com/airalcorn2/strike-with-a-pose) repo.
-
-**Some Samples from the data:**
-
-<p float="left">
-  <img src="Datasets/README images/airliner_roll_bg1_14.png" width="150" />
-  <img src="Datasets/README images/cannon_roll_bg1_116.png" width="150" /> 
-  <img src="Datasets/README images/tank_yaw_nobg_86.png" width="150" />
-  <img src="Datasets/README images/tractor_yaw_nobg_132.png" width="150" />
-  <img src="Datasets/README images/jeep_pitch_bg1_108.png" width="150" />
-
-</p>
-<p float="left">
-  <img src="Datasets/README images/barberchair_roll_bg1_2.png" width="150" />
-  <img src="Datasets/README images/fireengine_roll_bg1_6.png" width="150" /> 
-  <img src="Datasets/README images/shoppingcart_yaw_nobg_14.png" width="150" />
-  <img src="Datasets/README images/tablelamp_yaw_nobg_80.png" width="150" />
-  <img src="Datasets/README images/rockingchair_yaw_nobg_24.png" width="150" /> 
-</p><p float="left">
-  <img src="Datasets/README images/parkbench_pitch_bg1_192.png" width="150" />
-  <img src="Datasets/README images/mountainbike_pitch_bg1_64.png" width="150" /> 
-  <img src="Datasets/README images/hammerhead_pitch_bg1_28.png" width="150" />
-  <img src="Datasets/README images/forklift_roll_bg1_0.png" width="150" />
-  <img src="Datasets/README images/barberchair_roll_bg1_2.png" width="150" />
-
-</p><p float="left">
-    <img src="Datasets/README images/foldingchair_pitch_bg1_40.png" width="150" />
-    <img src="Datasets/README images/wheelbarrow_yaw_nobg_42.png" width="150" />
-</p>
-In addition to the main ObjectPose dataset, the paper introduced a set of similar datasets to test to robustness to different tansformations including scaling, rotation, background rotation, etc. See the paper for more details about the datasets.
-
-</p><p float="left">
-    <img src="Datasets/README images/objectpose truck samples.jpg" width="400" />
-    <img src="Datasets/README images/scaling + three-axes + compined + bg rot samples.jpg" width="400" />
-</p>
 
 <!-- ## Models Table: List of models tested in the paper
 
