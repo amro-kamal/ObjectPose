@@ -40,9 +40,7 @@ In addition to the main ObjectPose dataset, the paper introduced a set of simila
 </p>
 
 
-# ObjectPose
-### Are vision models robust against Unusual poses?
-
+# Deep Networks
 
 ## How to run the models on ImageNetV2 dataset:
 1. Create (only once) and activate python environment (conda create -n "env name") then (conda activate "env name"). Alternatively, if you are not using conda, you can use venv to create the env [link](https://oit.utk.edu/hpsc/isaac-open/pip-and-venv/).
