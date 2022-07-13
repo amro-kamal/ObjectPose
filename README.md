@@ -1,4 +1,4 @@
-Progress and limitations of deep networks to recognize objects in unusual poses
+###Progress and limitations of deep networks to recognize objects in unusual poses
 Amro Abbas & Stephane Deny
 ArXiv Link:
 
