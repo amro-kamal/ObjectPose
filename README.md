@@ -1,6 +1,6 @@
 ### Progress and limitations of deep networks to recognize objects in unusual poses
 by Amro Abbas & Stephane Deny  
-ArXiv Link:  
+ArXiv Link:  https://arxiv.org/abs/2207.08034
 
 # ObjectPose Dataset
 ُThe Datasets folder contains the code for creating ObjectPose datasets. The code for rendering 3d objects in this repo is from [Strike (With) A Pose](https://github.com/airalcorn2/strike-with-a-pose) repo.
